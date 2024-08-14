@@ -10,7 +10,7 @@ function Header() {
 			<SignedIn>
 				<div className="flex justify-between items-center w-full">
 					<span className="text-lg font-semibold">Welcome, {user?.firstName}!</span>
-					<UserButton afterSignOutUrl="/" />
+					<UserButton />
 				</div>
 			</SignedIn>
 			<SignedOut>
