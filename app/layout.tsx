@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
-
+import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,9 +20,7 @@ export default function RootLayout({
         <body className="flex flex-col h-screen">
           <Header />
           <div className="flex flex-1">
-            <div className="bg-white">
-              {/* Sidebar content goes here */}
-            </div>
+            <Sidebar />
             <div className="flex-1 bg-gray-100 overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               <div className="h-full">{children}</div>
             </div>
