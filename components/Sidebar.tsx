@@ -2,8 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import NewDocumentButton from './NewDocumentButton';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 
 function Sidebar() {
   const SidebarContent = () => (
@@ -40,9 +39,7 @@ function Sidebar() {
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon">
-              <Menu className="h-4 w-4" />
-            </Button>
+            <MenuIcon size={40} className="p-2 hover:bg-gray-200 rounded-lg cursor-pointer" />
           </SheetTrigger>
           <SheetContent side="left" className="w-[300px] p-0">
             <nav className="bg-gray-200 text-gray-800 h-full">
