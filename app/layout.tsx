@@ -17,9 +17,16 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>
-          <Header></Header>
-          {children}
+        <body className="flex flex-col h-screen">
+          <Header />
+          <div className="flex flex-1">
+            <div className="bg-white">
+              {/* Sidebar content goes here */}
+            </div>
+            <div className="flex-1 bg-gray-100 overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              <div className="h-full">{children}</div>
+            </div>
+          </div>
         </body>
       </html>
     </ClerkProvider>
